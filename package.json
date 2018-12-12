@@ -1,44 +1,71 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "gatsby-carbon-styled-components",
+  "description": "gatsby react platform with carbon components and storybook",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "homepage": "https://github.com/codejamninja/gatsby-carbon-styled-components",
+  "bugs": {
+    "url": "https://github.com/codejamninja/gatsby-carbon-styled-components/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
   "dependencies": {
-    "carbon-components": "^9.48.4",
-    "carbon-components-react": "^6.49.0",
+    "babel-plugin-styled-components": "^1.9.4",
+    "babel-preset-gatsby": "^0.1.6",
+    "carbon-components": "^9.61.1",
+    "carbon-components-react": "^6.60.1",
     "carbon-icons": "^7.0.7",
-    "gatsby": "^2.0.19",
-    "gatsby-image": "^2.0.15",
-    "gatsby-plugin-manifest": "^2.0.5",
-    "gatsby-plugin-offline": "^2.0.11",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sass": "^2.0.4",
-    "gatsby-plugin-sharp": "^2.0.7",
-    "gatsby-plugin-styled-components": "^3.0.1",
-    "gatsby-source-filesystem": "^2.0.4",
-    "gatsby-transformer-sharp": "^2.1.4",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "gatsby": "^2.0.53",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sass": "^2.0.7",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "styled-components": "^4.1.1"
+    "styled-components": "^4.1.2"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "build:serve": "npm run build && gatsby serve",
-    "develop": "gatsby develop",
+    "build": "npm run test && gatsby build",
+    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
+    "develop": "npm run lint && gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
+    "lint": "npm run format && eslint .",
+    "lint:fix": "npm run format && eslint --fix .",
     "start": "npm run develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:prod": "gatsby serve",
+    "test": "npm run lint"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "babel-preset-jam": "^0.1.0",
+    "eslint": "^5.10.0",
+    "eslint-config-jam": "^0.1.6",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.15.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  }
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "eslintIgnore": [
+    ".cache",
+    "public"
+  ]
 }

@@ -1,10 +1,8 @@
-import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-import { Button } from '../components'
-import { Link } from 'gatsby'
-import '../styles'
-import Image from '../components/image'
-import Layout from '../components/layout'
+import '../styles';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { Button } from '../components';
+import Layout from '../components/layout';
 
 const IndexPage = () => (
   <ThemeProvider theme={{}}>
@@ -12,6 +10,6 @@ const IndexPage = () => (
       <Button>Hello</Button>
     </Layout>
   </ThemeProvider>
-)
+);
 
-export default IndexPage
+export default IndexPage;
