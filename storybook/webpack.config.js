@@ -4,9 +4,15 @@ const path = require('path');
 const pkgDir = require('pkg-dir');
 const getRules = require('./getRules');
 
+const paths = {
+  root: pkgDir.sync(process.cwd())
+};
 const babel = fs.readJsonSync(
   path.resolve(pkgDir.sync(process.cwd()), '.babelrc')
 );
+
+fs.mkdirsSync(path.resolve(paths.root, '.cache'));
+fs.writeJsonSync(path.resolve(paths.root, '.cache/babelState.json'), {});
 
 module.exports = webpackConfig => {
   webpackConfig.resolve.extensions.unshift('.web.js');

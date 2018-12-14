@@ -64,6 +64,7 @@
     "@storybook/react": "^4.1.1",
     "babel-loader": "^8.0.4",
     "babel-preset-jam": "^0.1.0",
+    "css-loader": "^2.0.1",
     "eslint": "^5.10.0",
     "eslint-config-jam": "^0.1.6",
     "eslint-plugin-jsx-a11y": "^6.1.2",
@@ -74,6 +75,7 @@
     "markdown-loader": "^4.0.0",
     "pkg-dir": "^3.0.0",
     "prettier": "^1.15.3",
+    "style-loader": "^0.23.1",
     "url-loader": "^1.1.2"
   },
   "engines": {

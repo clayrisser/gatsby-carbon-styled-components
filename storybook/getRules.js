@@ -1,9 +1,17 @@
 const path = require('path');
 const pkgDir = require('pkg-dir');
 
+const paths = {
+  root: pkgDir.sync(process.cwd())
+};
+
 module.exports = function getRules() {
-  const include = [path.resolve(pkgDir.sync(process.cwd()), 'src')];
+  const include = [path.resolve(paths.root, 'src')];
   return [
+    {
+      test: /\.(s?css|sass)$/,
+      loaders: ['style-loader', 'css-loader']
+    },
     {
       test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
       include,
