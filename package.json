@@ -17,6 +17,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "dependencies": {
+    "autobind-decorator": "^2.4.0",
     "babel-plugin-styled-components": "^1.9.4",
     "babel-preset-gatsby": "^0.1.6",
     "carbon-components": "^9.61.1",
@@ -35,6 +36,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-flexbox-grid": "^2.1.2",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.1.2"
   },
@@ -51,9 +53,15 @@
     "lint:fix": "npm run format && eslint --fix .",
     "start": "npm run develop",
     "start:prod": "gatsby serve",
+    "storybook": "start-storybook -p 9001 -c storybook",
     "test": "npm run lint"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^4.1.1",
+    "@storybook/addon-links": "^4.1.1",
+    "@storybook/react": "^4.0.12",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
     "babel-preset-jam": "^0.1.0",
     "eslint": "^5.10.0",
     "eslint-config-jam": "^0.1.6",

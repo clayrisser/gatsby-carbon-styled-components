@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled, { withTheme } from 'styled-components';
-import Button from './Button';
+import Switch from './Switch';
 
-class StyledButton extends Component {
+class StyledSwitch extends Component {
   get style() {
     return {
       ...this.props.style
@@ -11,8 +11,8 @@ class StyledButton extends Component {
 
   render() {
     const props = { ...this.props };
-    return <Button {...props} style={this.style} />;
+    return <Switch {...props} style={this.style} />;
   }
 }
 
-export default styled(withTheme(StyledButton))``;
+export default styled(withTheme(StyledSwitch))``;
